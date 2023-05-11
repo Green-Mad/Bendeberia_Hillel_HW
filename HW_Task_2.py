@@ -7,3 +7,4 @@ Toshiba_employees = ['Zoreslav', 'Moses', 'Lord', 'Marilouise']
 
 Toshiba_employees.extend(Eleks_employees)
 print(Toshiba_employees)
+
