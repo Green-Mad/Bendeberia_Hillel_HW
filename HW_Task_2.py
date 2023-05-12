@@ -2,9 +2,11 @@
 #Eleks_employees
 #Toshiba_employees
 
-Eleks_employees = ['Freya', 'Jasmine', 'Mistress', 'Ariel', 'Kyrylo']
-Toshiba_employees = ['Zoreslav', 'Moses', 'Kyrylo', 'Lord', 'Marilouise']
+eleks_employees = ['Freya', 'Jasmine', 'Mistress', 'Ariel', 'Kyrylo']
+toshiba_employees = ['Zoreslav', 'Moses', 'Kyrylo', 'Lord', 'Marilouise']
 
-Toshiba_employees.extend(Eleks_employees)
-print(Toshiba_employees)
+toshiba_employees += eleks_employees
+eleks_employees = []
 
+print("Toshiba employees:", toshiba_employees)
+print("Eleks employees:", eleks_employees)
