@@ -4,4 +4,3 @@ alcohol_blacklist ={'Wolfgan Amadeus Mozart', 'Spartak Subota', 'Govard Lovekraf
 half_bingo = casino_blacklist.intersection(poker_blacklist)
 bingo = half_bingo.intersection(alcohol_blacklist)
 print(bingo)
-
