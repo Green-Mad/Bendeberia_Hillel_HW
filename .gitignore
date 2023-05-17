@@ -1,7 +1,5 @@
 # created by virtualenv automatically
 .idea
-Lib
-Scripts
 README.md
 Tokens.txt
 pyvenv.cfg
