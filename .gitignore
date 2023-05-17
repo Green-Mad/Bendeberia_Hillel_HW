@@ -1,6 +1,4 @@
-# created by virtualenv automatically
-.idea
 README.md
 Tokens.txt
-pyvenv.cfg
-venv
+
+
