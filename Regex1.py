@@ -13,6 +13,6 @@ for pair in pairs:
         key, value = pair.split("=", maxsplit=1)
         if value:
             value = value.replace("=", "")
-            result[key] = value
+            result[key.strip()] = value.strip()
 
 print(result)
