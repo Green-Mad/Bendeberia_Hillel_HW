@@ -36,8 +36,8 @@ html_markup = """
 </html>
 """
 link_pattern = r'<div id="([^"]+)">' \
-              r'\s*<a href="([^"]+)">' \
-              r'\s*([^<>\n]+)\s*</a>'
+               r'\s*<a href="(?:\w+://)?(?:\w+\.)?([^"/]+)">' \
+               r'\s*([^<>\n]+)' \
+               r'\s*</a>'
 links = re.findall(link_pattern, html_markup, re.MULTILINE)
 print(links)
-
