@@ -3,7 +3,8 @@
 
 import re
 
-string = "name=Amanda=sssss&age=32&&salary=1500&currency=euro"
+string = " name=Amanda=sssss&age=32&&salary=1500&currency=euro "
+string = string.strip()
 updated_string = re.sub(r"=sssss", "", string)
 pairs = updated_string.split("&")
 result = {}
