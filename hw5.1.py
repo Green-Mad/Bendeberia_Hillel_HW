@@ -14,10 +14,9 @@ to the repository (not directories or file).'''
 
 import random
 import os
-
+import pickle
 
 os.makedirs('test/data', exist_ok=True)
-
 
 operations = [1, 2, 3]
 tupelist = []
@@ -28,16 +27,8 @@ for _ in range(100):
     operation = random.choice(operations)
     tupelist.append((left_operand, right_operand, operation))
 
+file_path = './test/data/tupelist_data.pkl'
+with open(file_path, 'wb') as file:
+    pickle.dump(tupelist, file)
 
-file_path = './test/data/tupelist_data.txt'
-with open(file_path, 'w') as file:
-    for tpl in tupelist:
-        file.write(f"{tpl[0]} {tpl[1]} {tpl[2]}\n")
-
-print("Data added successfully", file_path)
-
-
-import pickle
-with open (file_path, 'w+b') as file:
-    data_to_write = pickle.dumps(tupelist)
-    file.write(data_to_write)
+print("Data added successfully:", file_path)
