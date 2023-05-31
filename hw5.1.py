@@ -34,7 +34,7 @@ with open(file_path, 'w') as file:
     for tpl in tupelist:
         file.write(f"{tpl[0]} {tpl[1]} {tpl[2]}\n")
 
-print("Дані успішно додано у файл:", file_path)
+print("Data added successfully", file_path)
 
 
 import pickle
