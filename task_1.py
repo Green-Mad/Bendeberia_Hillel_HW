@@ -1,11 +1,7 @@
 def arithmetic(left_operand, right_operand, operation):
-    """Perform arithmetic operation on two numbers.
-    Args:
-        left_operand (int or float): The left operand.
-        right_operand (int or float): The right operand.
-        operation (str): The operation to be performed ('+', '-', '*', or '/').
-    Returns:
-        int or float or str: The result of the arithmetic operation, or a string indicating an unknown operation."""
+    """
+        Apply arithmetic operation for provided left and right operands
+    """
     if operation == '+':
         return left_operand + right_operand
     elif operation == '-':
@@ -23,14 +19,12 @@ if __name__ == "__main__":
     assert arithmetic(3, 4, operation="+") == 7
     assert arithmetic(25, 5, operation="/") == 5
     assert type(arithmetic(25, 5, operation="/")) == float
-    assert arithmetic(5, 5, operation="//") == "Not known operation: //"
-    assert arithmetic.__doc__ == """Perform arithmetic operation on two numbers.
-    Args:
-        left_operand (int or float): The left operand.
-        right_operand (int or float): The right operand.
-        operation (str): The operation to be performed ('+', '-', '*', or '/').
-    Returns:
-        int or float or str: The result of the arithmetic operation, or a string indicating an unknown operation."""
+    assert arithmetic(5, 5, operation="//") == f"Not known operation: //"
+    assert arithmetic.__doc__ == (
+        f"\n{' ' * 8}"
+        f"Apply arithmetic operation for provided left and right operands\n"
+        f"{' ' * 4}"""
+    )
     assert arithmetic.__code__.co_name == "arithmetic"
     assert arithmetic.__code__.co_varnames == ("left_operand", "right_operand", "operation")
     try:
@@ -46,5 +40,3 @@ if __name__ == "__main__":
         arithmetic(1, right_operand=2, operation="+")
     except TypeError as e:
         assert e.__class__ is TypeError
-
-print("All checks passed successfully.")
