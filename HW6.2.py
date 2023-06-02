@@ -6,8 +6,9 @@ def square(side):
     diagonal = math.sqrt(2) * side
     return perimeter, area, diagonal
 
-side = random.randint(1, 1000)
-perimeter, area, diagonal = square(side)
+if __name__ == "__main__":
+    side = random.randint(1, 1000)
+    perimeter, area, diagonal = square(side)
 
 print("Perimeter:", perimeter)
 print("Area:", area)
