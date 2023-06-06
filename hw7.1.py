@@ -1,4 +1,4 @@
-# print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+# Implement your own print function. It should work on all operating systems. You can't use build-in print function
 
 import sys
 

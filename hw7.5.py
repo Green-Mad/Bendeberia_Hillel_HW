@@ -1,3 +1,4 @@
+# Implement your own all function
 def my_all(iterable):
     for element in iterable:
         if not element:

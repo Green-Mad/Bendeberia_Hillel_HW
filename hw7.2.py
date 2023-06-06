@@ -1,3 +1,5 @@
+# Implement your realization of the function filter
+
 from typing import Callable, Iterable, List, Any
 
 def my_filter(callback: Callable[[Any], bool], sequence: Iterable) -> List[Any]:
