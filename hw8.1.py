@@ -2,23 +2,20 @@
 # intended. For example, create a pair of functions for the arithmetic operations of summation and multiplication. When
 # calling these functions, the result of the operation must be returned and the name of the function that was called
 # must be displayed in the console with the result. Small hint (__name__)
-def print_function_name(func):
+def function_call_logger(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
-        print("Function name:", func.__name__)
+        print(f"Function {func.__name__} was called. Result: {result}")
         return result
     return wrapper
 
-@print_function_name
-def summation(a, b):
+@function_call_logger
+def add(a, b):
     return a + b
 
-@print_function_name
-def multiplication(a, b):
+@function_call_logger
+def multiply(a, b):
     return a * b
 
-result = summation(13, 42)
-print("Result:", result)
-
-result = multiplication(2, 21)
-print("Result:", result)
+print(add(3, 5))
+print(multiply(4, 6))
